@@ -1,0 +1,6 @@
+[submodule "vendor/github.com/mesilliac/pulse-simple"]
+	path = vendor/github.com/mesilliac/pulse-simple
+	url = https://github.com/mesilliac/pulse-simple
+[submodule "vendor/github.com/veandco/go-sdl2"]
+	path = vendor/github.com/veandco/go-sdl2
+	url = https://github.com/veandco/go-sdl2
