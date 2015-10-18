@@ -20,7 +20,7 @@ func (a Analysis) Info(k int) (frequency float64, amplitude float64, phase float
 	n := float64(len(a.Data))
 	frequency = a.SampleRate * float64(k) / n
 	x := a.Data[k]
-	return frequency, cmplx.Abs(x) * 2 / n, -cmplx.Phase(x)
+	return frequency, cmplx.Abs(x) / n, -cmplx.Phase(x)
 }
 
 type Analyser struct {
