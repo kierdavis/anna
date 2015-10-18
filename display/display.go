@@ -87,6 +87,7 @@ func (d *Display) Draw(an analyser.Analysis) (err error) {
 	err = d.plot(ampls)
 	if err != nil {return err}
 	
+	/*
 	// Plot recent average dataset
 	d.calcAverage()
 	
@@ -95,6 +96,7 @@ func (d *Display) Draw(an analyser.Analysis) (err error) {
 	
 	err = d.plot(d.average)
 	if err != nil {return err}
+	*/
 	
 	d.renderer.Present()
 	return nil
