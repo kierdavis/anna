@@ -44,7 +44,7 @@ func main() {
     var an analyser.Analysis
     
     cycles := 0
-    start := time.Now()
+    start := time.Now().Add(time.Millisecond*20) // give it a 20ms head start
     
     for {
         err = s.Read(lb[:], rb[:])
@@ -66,11 +66,8 @@ func main() {
         expectedTime := start.Add(time.Duration(float64(cycles) * ExpectedCycleSecs * float64(time.Second)))
         lag := time.Now().Sub(expectedTime)
         
-        var c string
         if lag > 0 {
-            c = "\x1b[1;31m"
+            fmt.Printf("lagging %s behind!\n", lag)
         }
-        
-        fmt.Printf("overall lag: %s%s\x1b[21;39m\n", c, lag)
     }
 }
