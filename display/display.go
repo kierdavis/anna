@@ -69,7 +69,7 @@ func (d *Display) Draw(an analyser.Analysis) (err error) {
 	
 	// Prepare dataset
 	start := 2
-	end := 600
+	end := 500
 	
 	ampls := d.getNextRecentDataset(end - start)
 	j := 0
