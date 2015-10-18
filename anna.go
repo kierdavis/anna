@@ -57,7 +57,8 @@ func main() {
         
         la.Analyse(&an)
         
-        err = d.Draw(an)
+        m := la.MeanBufferAmplitude()
+        err = d.Draw(an, 4*m)
         if err != nil {
             panic(err)
         }

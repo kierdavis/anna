@@ -59,7 +59,7 @@ func (d *Display) Close() {
 	sdl.Quit()
 }
 
-func (d *Display) Draw(an analyser.Analysis) (err error) {
+func (d *Display) Draw(an analyser.Analysis, scale float64) (err error) {
 	// Fill black
 	err = d.renderer.SetDrawColor(0x00, 0x00, 0x00, 0xFF)
 	if err != nil {return err}
@@ -76,7 +76,7 @@ func (d *Display) Draw(an analyser.Analysis) (err error) {
 	
 	for i := start; i < end; i++ {
 		_, ampl, _ := an.Info(i)
-		ampls[j] = ampl * 1.75
+		ampls[j] = ampl * scale
 		j++
 	}
 	

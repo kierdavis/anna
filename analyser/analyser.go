@@ -34,6 +34,13 @@ type Analyser struct {
 	bufferPos int
 }
 
+func (a *Analyser) MeanBufferAmplitude() (mean float64) {
+	for _, x := range a.buffer {
+		mean += x
+	}
+	return mean / float64(a.BufferSize)
+}
+
 func (a *Analyser) Write(samples []float64) {
 	if a.buffer == nil {
 		// Initialise the buffer.
