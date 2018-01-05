@@ -1,3 +1,5 @@
+**PLEASE NOTE: I no longer actively maintain this project. Pull requests are welcome, but development has halted and issues are unlikely to gain a response.**
+
 ## Installation
 
 This package utilises vendoring (as per the Go 1.5 standard) through the use of
